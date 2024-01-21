@@ -1,3 +1,4 @@
 def process_data(data):
-    # Placeholder for data processing logic
-    pass
+    # clean up the text or extract specific information
+    processed_data = data  
+    return processed_data
