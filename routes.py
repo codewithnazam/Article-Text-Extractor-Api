@@ -10,9 +10,9 @@ def initialize_routes(app):
         if not url:
             return jsonify({"error": "URL parameter is required"}), 400
 
-        extracted_data = extract_data(url)
-        if 'error' in extracted_data:
-            return jsonify(extracted_data), 500
-
-        processed_data = process_data(extracted_data)
-        return jsonify(processed_data)
+        try:
+            extracted_data = extract_data(url)
+            processed_data = process_data(extracted_data)
+            return jsonify(processed_data)
+        except Exception as e:
+            return jsonify({"error": str(e)}), 500
