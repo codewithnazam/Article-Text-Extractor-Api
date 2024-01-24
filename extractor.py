@@ -8,7 +8,7 @@ def get_meta_content(soup, attr_name, attr_value):
 def is_unwanted_tag(tag):
     unwanted_tags = ['script', 'style', 'header', 'footer', 'aside', 'h1']
     unwanted_ids = ['sidebar', 'navigation', 'widget']
-    unwanted_classes = ['author', 'categories', 'nv-meta-list', 'text-muted', 'event-promo', 'social-share']
+    unwanted_classes = ['author', 'categories', 'nv-meta-list', 'text-muted', 'event-promo', 'social-share', 'speechify-ignore']
     return any([
         tag.name in unwanted_tags,
         tag.get('id', '').startswith(tuple(unwanted_ids)),
