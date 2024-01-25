@@ -1,8 +1,10 @@
 from flask import Flask
+from flask_cors import CORS
 from routes import initialize_routes
 from errors import handle_errors
 
 app = Flask(__name__)
+CORS(app, resources={r"/extract": {"origins": "https://codewithnazam.com"}})
 
 # Initialize routes
 initialize_routes(app)
