@@ -1,6 +1,10 @@
-runtime: python310
+runtime_config:
+  env: flex # Use the flexible environment for more control
+entrypoint: gunicorn -b :$PORT app:app # Keep your existing entrypoint
+env_variables:
+  NLTK_DATA: /Users/muhammadnazam/nltk_data # Set the NLTK_DATA path (adjust if needed)
 
-entrypoint: gunicorn -b :$PORT app:app
+runtime: python310
 
 handlers:
   - url: /.*

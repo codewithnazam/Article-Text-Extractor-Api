@@ -45,6 +45,7 @@
 import requests
 from newspaper import Article
 
+
 def extract_data(url):
     try:
         # Initialize the article using Newspaper3k
