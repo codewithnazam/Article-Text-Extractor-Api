@@ -44,10 +44,14 @@
 
 import requests
 from newspaper import Article
-
+import validators
 
 def extract_data(url):
+    # Validate URL
+    if not validators.url(url):
+        return {"error": "Please enter a valid URL."}
     try:
+        
         # Initialize the article using Newspaper3k
         article = Article(url)
 
@@ -61,7 +65,8 @@ def extract_data(url):
 
         # Perform NLP to get keywords and summary
         article.nlp()
-
+        
+       
         # Compile extracted data
         data = {
             "title": article.title,
@@ -72,6 +77,7 @@ def extract_data(url):
             "summary": article.summary,
             "language": article.meta_lang,
             "description": article.meta_description,
+            "article_url": url,  # Added the article URL
         }
 
         return data

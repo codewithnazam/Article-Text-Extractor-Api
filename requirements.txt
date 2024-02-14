@@ -6,3 +6,4 @@ lxml==4.9.2
 flask-cors==4.0.0
 newspaper3k==0.2.8
 nltk==3.8.1
+validators==0.22.0
