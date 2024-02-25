@@ -14,6 +14,8 @@ Leveraging the power of `newspaper3k`, our API extracts a wealth of information 
 - **Summary Generation:** Provides a concise summary of the article's main points.
 - **Language Detection:** Identifies the language of the article.
 - **Metadata Discovery:** Unveils additional metadata like publication date and description for a comprehensive understanding.
+- **Enhanced Error Handling:** Delivers clear, understandable error messages to help diagnose issues faster.
+- **Rate Limiting:** To ensure fair usage, the API allows 2 requests per minute. Clear messages are provided when this limit is exceeded.
 
 ## Access the API
 
@@ -37,6 +39,7 @@ Our API serves multiple purposes across various domains:
 - **User-Friendly Integration:** Easy to integrate with straightforward usage.
 - **Reliable Accuracy:** Ensures precise and relevant data extraction.
 - **Time-Efficient:** Provides quick and comprehensive analysis, saving valuable time.
+- **Transparent Usage Policy:** Clear communication on rate limits and error handling for a smoother user experience.
 
 ## Getting Started
 
