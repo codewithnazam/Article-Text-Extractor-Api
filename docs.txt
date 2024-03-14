@@ -1,0 +1,35 @@
+Development Environment Setup
+Python Version:
+
+Ensure Python 3.6 or newer is installed on your system. You can check your Python version by running 
+
+    ython --version or python3 --version in your terminal.
+
+Virtual Environment (venv):
+
+ Create a virtual environment to manage your project's dependencies separately. Navigate to your project directory and run:
+
+    source venv/bin/activate
+
+
+Install Dependencies:
+
+     Ensure your requirements.txt file is up-to-date with all the necessary packages. Install them by running:
+
+     pip install -r requirements.txt
+
+Running the Application Locally
+Environment Variables:
+    If your application uses environment variables (for API keys, configurations, etc.), make sure they are set up in your development environment. You can use a .env file or export them directly in your terminal.
+
+Start the Flask Application:
+    Navigate to your project directory and run the Flask application with:
+
+        flask run
+
+    Alternatively, if your entry file is named differently (e.g., app.py), you can run:
+
+        python app.py
+
+The application should now be running on http://localhost:5000. You can access it using your web browser or test it using tools like Postman.
+

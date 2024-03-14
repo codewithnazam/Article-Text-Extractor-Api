@@ -4,7 +4,7 @@ entrypoint: gunicorn -b :$PORT app:app # Keep your existing entrypoint
 env_variables:
   NLTK_DATA: /Users/muhammadnazam/nltk_data # Set the NLTK_DATA path (adjust if needed)
 
-runtime: python310
+runtime: python312
 
 handlers:
   - url: /.*
